@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual Environments
+.env/
+.venv/
+env/
+venv/
+*.egg-info/
+
+# macOS system files
+.DS_Store
+
+# Model files (avoid pushing large .pth files to GitHub)
+*.pth
+*.pt
+*.ckpt
+
+# Image output files
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Logs or temporary files
+*.log
+*.tmp
+*.out
+
+# VS Code / PyCharm / IDE stuff
+.vscode/
+.idea/
+
+# Streamlit (if used)
+.streamlit/
+
+# Jupyter Notebook metadata
+.ipynb_checkpoints/
