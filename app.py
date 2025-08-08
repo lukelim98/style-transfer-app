@@ -1,3 +1,4 @@
+import io
 import streamlit as st
 from PIL import Image
 from utils import load_model, stylize_image
@@ -30,3 +31,16 @@ if uploaded_file is not None:
             model = load_model(style)
             output_image = stylize_image(model, input_image)
             st.image(output_image, caption=f"Stylized with {style_label}", use_container_width=True)
+
+            # Convert to bytes for download
+            img_bytes = io.BytesIO()
+            output_image.save(img_bytes, format='JPEG')
+            img_bytes.seek(0)
+
+            # Download button
+            st.download_button(
+                label='Download Stylized Image',
+                data=img_bytes,
+                file_name=f"{style_label.lower}_stylized.jpg",
+                mime='image/jpeg'
+        )
