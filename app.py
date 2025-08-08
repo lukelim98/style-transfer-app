@@ -4,5 +4,14 @@ from utils import load_model, stylize_image
 
 st.set_page_config(page_title='Style Transfer APP', layout='centered')
 
-st.title('Neural Style Transfker')
+st.title('Neural Style Transfer')
 st.markdown('Upload an image and choose an art style to stylize it')
+
+# Style options
+STYLE_NAMES = {
+    "Candy": "candy",
+    "Mosaic": "mosaic",
+    "Rain Princess": "rain_princess",
+    "Udnie": "udnie",
+}
+
