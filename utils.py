@@ -11,9 +11,6 @@ def load_model(style_name, model_dir='models/saved_models'):
     return model
 
 def stylize_image(model, image):
-    # Ensure image is in RGB mode
-    image = image.convert('RGB')
-
     # Preprocessing: resize, convert to tensor, scale to [0, 255]
     transform = transforms.Compose([
         transforms.Resize(512),
